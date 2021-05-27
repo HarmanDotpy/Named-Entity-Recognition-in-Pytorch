@@ -21,22 +21,22 @@ args=parser.parse_args()
 
 #simple bilstm with random/glove
 if(args.char_embeddings == 0 and args.layer_normalization == 0 and args.crf == 0):
-    os.system('python3 TEST2_1_1_bilstm_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
+    os.system('python3 bilstm_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
 
 #bilstm+char+glove/random
 elif(args.char_embeddings == 1 and args.layer_normalization == 0 and args.crf == 0):
-    os.system('python3 TEST2_1_3_bilstm_char_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
+    os.system('python3 bilstm_char_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
 
 #bilstm+layernorm+char+glove/random
 elif(args.char_embeddings == 1 and args.layer_normalization == 1 and args.crf == 0):
-    os.system('python3 TEST2_1_4_bilstm_layernorm_char_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
+    os.system('python3 bilstm_layernorm_char_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
 
 #bilstm+glove/random+layernorm+char+crf
 elif(args.char_embeddings == 1 and args.layer_normalization == 1 and args.crf == 1):
-    os.system('python3 TEST2_2a_bilstm_crf_layernorm_char_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
+    os.system('python3 bilstm_crf_layernorm_char_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
 
 elif(args.char_embeddings == 1):
-    os.system('python3 TEST2_2a_bilstm_crf_layernorm_char_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
+    os.system('python3 bilstm_crf_layernorm_char_random_glove.py --initialization {} --model_file {} --output_file {} --test_data_file {} --glove_embeddings_file {} --vocabulary_input_file {}'.format(args.initialization, args.model_file, args.output_file, args.test_data_file, args.glove_embeddings_file, args.vocabulary_input_file ))
 ################################ extra
 
 # #bilstm+glove/random+crf
